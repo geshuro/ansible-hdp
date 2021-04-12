@@ -17,7 +17,7 @@ hdpsearch_version: '4.0.0'                                # must be the full ver
 hdpsearch_build_number: '400'                             # the HDP Search build number from docs.hortonworks.com
 
 #repo_base_url: 'http://public-repo-1.hortonworks.com'     # change this if using a Local Repository
-repo_base_url: 'http://172.28.12.127'
+repo_base_url: 'http://172.28.12.127'                      # Repositorio local
 
 ###########################
 ## general configuration ##
