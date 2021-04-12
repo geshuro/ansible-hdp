@@ -1,0 +1,22 @@
+######################################################
+##
+## The static inventory puts the hosts in different groups as described here: https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#hosts-and-groups
+## Variables would be defined directly for each host, including the ansible_user, the login user with sudoers permissions.
+## For authentication, either the password or the SSH Private Key can be used.
+##
+######################################################
+[pro:children]
+hdp-master
+hdp-slave
+
+[hdp-master]
+master01 ansible_host=172.28.12.7 ansible_user=admcuc ansible_become=true ansible_ssh_private_key_file="/tmp/kp/kp-hdp.pem" rack=/default-rack
+master02 ansible_host=172.28.12.36 ansible_user=admcuc ansible_become=true ansible_ssh_private_key_file="/tmp/kp/kp-hdp.pem" rack=/default-rack
+
+[hdp-slave]
+slave01 ansible_host=172.28.12.42 ansible_user=admcuc ansible_become=true ansible_ssh_private_key_file="/tmp/kp/kp-hdp.pem" rack=/default-rack
+slave02 ansible_host=172.28.12.237 ansible_user=admcuc ansible_become=true ansible_ssh_private_key_file="/tmp/kp/kp-hdp.pem" rack=/default-rack
+slave03 ansible_host=172.28.12.222 ansible_user=admcuc ansible_become=true ansible_ssh_private_key_file="/tmp/kp/kp-hdp.pem" rack=/default-rack
+slave04 ansible_host=172.28.12.37 ansible_user=admcuc ansible_become=true ansible_ssh_private_key_file="/tmp/kp/kp-hdp.pem" rack=/default-rack
+
+#slave02 ansible_host=192.168.0.4 ansible_user=root ansible_ssh_pass=changeme

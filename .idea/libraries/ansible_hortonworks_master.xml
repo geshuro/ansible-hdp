@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ansible-hortonworks-master">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/ansible-hortonworks-master.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

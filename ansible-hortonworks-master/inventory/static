@@ -1,0 +1,22 @@
+######################################################
+##
+## The static inventory puts the hosts in different groups as described here: https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#hosts-and-groups
+## Variables would be defined directly for each host, including the ansible_user, the login user with sudoers permissions.
+## For authentication, either the password or the SSH Private Key can be used.
+##
+######################################################
+
+[hdp-masternode-01]
+master01 ansible_host=172.28.12.240 ansible_user=root ansible_ssh_pass=indra2020 ansible_become=true ansible_ssh_private_key_file="/tmp/kp/kp-hdp.pem" rack=/default-rack
+
+[hdp-masternode-02]
+master02 ansible_host=172.28.12.39 ansible_user=root ansible_ssh_pass=indra2020 ansible_become=true ansible_ssh_private_key_file="/tmp/kp/kp-hdp.pem" rack=/default-rack
+
+[hdp-management]
+edge01 ansible_host=172.28.12.127 ansible_user=root ansible_ssh_pass=indra2020 ansible_become=true ansible_ssh_private_key_file="/tmp/kp/kp-hdp.pem" rack=/default-rack
+
+[hdp-worker]
+slave01 ansible_host=172.28.12.7 ansible_user=root ansible_ssh_pass=indra2020 ansible_become=true ansible_ssh_private_key_file="/tmp/kp/kp-hdp.pem" rack=/default-rack
+slave02 ansible_host=172.28.12.15 ansible_user=root ansible_ssh_pass=indra2020 ansible_become=true ansible_ssh_private_key_file="/tmp/kp/kp-hdp.pem" rack=/default-rack
+slave03 ansible_host=172.28.12.217 ansible_user=root ansible_ssh_pass=indra2020 ansible_become=true ansible_ssh_private_key_file="/tmp/kp/kp-hdp.pem" rack=/default-rack
+
